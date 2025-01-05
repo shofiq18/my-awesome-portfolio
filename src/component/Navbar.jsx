@@ -3,17 +3,17 @@ import React from "react";
 const Navbar = () => {
   return (
     <nav className="sticky top-0 z-50 bg-gray-950 text-white shadow-lg">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="navbar">
+      <div className="container max-w-7xl mx-auto px-4">
+        <div className="navbar flex justify-between items-center">
+          {/* Brand Name */}
           <div className="navbar-start">
-            {/* Brand Name */}
-            <a href="#" className="text-2xl bg-gradient-to-r from-blue-950  to-blue-400 font-bold">
+            <a href="#" className="text-2xl bg-gradient-to-r from-blue-950 to-blue-400 font-bold">
               SI
             </a>
           </div>
 
-          {/* Navbar Center - Links */}
-          <div className="navbar-center hidden lg:flex">
+          {/* Navbar Links */}
+          <div className="hidden md:flex navbar-center">
             <ul className="menu menu-horizontal px-1 space-x-4">
               <li>
                 <a href="#hero" className="hover:text-primary">Home</a>
@@ -31,21 +31,20 @@ const Navbar = () => {
                 <a href="#projects" className="hover:text-primary">Projects</a>
               </li>
               <li>
-              <button className="bg-blue-500 px-3 py-2 text-white rounded-md hover:bg-blue-600">
-              <a href="#contact" className="hover:text-primary">Let's talk</a>
-
-                  </button>
+                <button className="bg-blue-500 px-3 py-2 text-white rounded-md hover:bg-blue-600">
+                  <a href="#contact" className="hover:text-primary">Let's talk</a>
+                </button>
               </li>
             </ul>
           </div>
 
-          {/* Navbar End - Mobile Menu */}
-          <div className="navbar-end lg:hidden">
+          {/* Mobile Menu */}
+          <div className="navbar-end md:hidden">
             <div className="dropdown">
               <label tabIndex={0} className="btn btn-ghost">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
+                  className="h-6 w-6 mr-4"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -60,7 +59,7 @@ const Navbar = () => {
               </label>
               <ul
                 tabIndex={0}
-                className="menu menu-sm dropdown-content mt-3 z-50 p-2 shadow-lg bg-gray-800 rounded-box w-52 text-white"
+                className="menu menu-sm dropdown-content mt-3 z-50 p-2  shadow-lg bg-gray-800 rounded-box w-52 text-white overflow-x-auto"
               >
                 <li>
                   <a href="#hero" className="hover:text-primary">Home</a>
@@ -80,7 +79,6 @@ const Navbar = () => {
                 <li>
                   <a href="#contact" className="hover:text-primary">Contact</a>
                 </li>
-                
               </ul>
             </div>
           </div>

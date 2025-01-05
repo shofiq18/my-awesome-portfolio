@@ -20,11 +20,20 @@ const Hero = () => {
               that solve real-world problems. Specializing in modern web technologies
               and user-centric design.
             </p>
-            <button className="px-3 py-2 flex items-center gap-2 bg-blue-500 rounded-md text-white hover:bg-blue-600">
-              <Download className="w-5 h-5" /> Download CV
-            </button>
+            <button className="bg-blue-500 px-6 py-3 text-white rounded-md hover:bg-blue-600 flex items-center gap-2">
+                  <Download className="text-white" />
+                  <a
+                    href="https://mybdjobs.bdjobs.com/mybdjobs/masterview.asp"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-primary"
+                  >
+                    Download CV
+                  </a>
+                </button>
 
-            <div className="flex gap-3 text-2xl transition-all mt-5 md:mt-0">
+
+            <div className="flex gap-6 text-2xl transition-all mt-5 md:mt-0">
               <a href="https://github.com/shofiq18" target="_blank" rel="noopener noreferrer">
                 <FaGithub className="text-2xl hover:text-primary" />
               </a>
