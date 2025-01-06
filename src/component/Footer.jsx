@@ -8,7 +8,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-gray-950 text-gray-300 py-16 border-t shadow-lg border-gray-800 relative">
-      <div className="container mx-auto max-w-7xl px-4">
+      <div className="container mx-auto max-w-7xl px-8 md:px-4">
         <div className="flex flex-col lg:flex-row justify-between items-center space-y-6 lg:space-y-0">
           {/* Brand Section */}
           <div className="text-center lg:text-left">

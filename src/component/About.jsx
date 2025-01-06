@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 
 const About = () => {
   return (
-    <div id="about" className="py-20 bg-gray-900 z-50 text-gray-300">
-      <div className="max-w-7xl mx-auto px-4">
+    <div id="about" className="py-20  bg-gray-900 z-50 text-gray-300">
+      <div className="max-w-7xl mx-auto px-8 md:px-4">
         <h2 className="text-4xl font-bold text-center mb-12">About Me</h2>
         <div className="flex flex-col sm:flex-row justify-between items-center gap-12">
           {/* Image Section */}

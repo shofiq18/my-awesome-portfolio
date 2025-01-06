@@ -34,7 +34,7 @@ const Education = () => {
 
   return (
     <div id="education" className="py-20 bg-gray-950">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-8 md:px-4">
         <h2 className="text-4xl font-bold text-center mb-8 text-gray-200">
           Educational Qualification
         </h2>
