@@ -1,33 +1,43 @@
 import { Mail, MessageSquare, Phone } from "lucide-react";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "emailjs-com";
-
-
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
   const form = useRef();
+  const [isLoading, setIsLoading] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setIsLoading(true); // Show loading state
 
     emailjs
       .sendForm(
-        "service_a965ium", // Replace with your EmailJS Service ID
-        "template_0r4tavd", // Replace with your EmailJS Template ID
+        "service_a965ium", // Your EmailJS Service ID
+        "template_0r4tavd", // Your EmailJS Template ID
         form.current,
-        "hjO53ZNcTauv1bpgX" // Replace with your EmailJS User ID
+        "hjO53ZNcTauv1bpgX" // Your EmailJS Public Key
       )
       .then(
         (result) => {
-          alert("Message sent successfully!");
-          console.log(result.text);
-          e.target.reset();
+          setIsLoading(false);
+          toast.success("Message sent successfully!"); // Success toast
+          if (form.current) {
+            form.current.reset(); // Reset form fields
+          }
         },
         (error) => {
-          alert("Failed to send message. Please try again.");
-          console.log(error.text);
+          setIsLoading(false);
+          console.error(error.text);
+          toast.error("Failed to send the message. Please try again."); // Error toast
         }
-      );
+      )
+      .catch((error) => {
+        setIsLoading(false);
+        console.error("Unexpected error:", error);
+        toast.error("An unexpected error occurred. Please try again.");
+      });
   };
 
   return (
@@ -39,6 +49,7 @@ const Contact = () => {
 
         <div className="max-w-3xl mx-auto">
           <div className="grid md:grid-cols-2 gap-8">
+            {/* Contact Info */}
             <div className="space-y-6">
               <div className="flex flex-wrap items-center gap-4">
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
@@ -86,6 +97,7 @@ const Contact = () => {
               </div>
             </div>
 
+            {/* Contact Form */}
             <form ref={form} onSubmit={sendEmail} className="space-y-4">
               <div>
                 <label
@@ -137,14 +149,19 @@ const Contact = () => {
 
               <button
                 type="submit"
-                className="btn bg-blue-800 hover:bg-blue-900 text-white w-full"
+                disabled={isLoading}
+                className={`btn bg-blue-800 hover:bg-blue-900 text-white w-full ${
+                  isLoading ? "opacity-50" : ""
+                }`}
               >
-                Send Message
+                {isLoading ? "Sending..." : "Send Message"}
               </button>
             </form>
           </div>
         </div>
       </div>
+      {/* Toast Notification Container */}
+      <ToastContainer />
     </section>
   );
 };
