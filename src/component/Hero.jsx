@@ -14,7 +14,7 @@ const Hero = () => {
             <h1 className="md:text-6xl text-4xl font-bold mb-4">
               Hi, I'm <p className="text-blue-400">Md. Shofiqul Islam</p>
             </h1>
-            <p className="md:text-2xl text-lg mb-3">Full Stack Developer</p>
+            <p className="md:text-2xl text-lg mb-3">Frontend  Developer</p>
             <p className="lg:w-[600px] mb-4 md:mb-0 text-sm text-gray-300">
               Passionate about creating beautiful and functional web applications
               that solve real-world problems. Specializing in modern web technologies

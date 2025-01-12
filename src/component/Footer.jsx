@@ -28,16 +28,16 @@ const Footer = () => {
 
           {/* Social Links */}
           <div className="flex space-x-4 justify-center">
-            <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer" className="hover:text-primary">
+            <a href="https://github.com/shofiq18" target="_blank" rel="noopener noreferrer" className="hover:text-primary">
               <FaGithub className="text-2xl" />
             </a>
-            <a href="https://facebook.com/yourprofile" target="_blank" rel="noopener noreferrer" className="hover:text-primary">
+            <a href="https://www.facebook.com/mdshafiqulislam.shafiq.9659/" target="_blank" rel="noopener noreferrer" className="hover:text-primary">
               <FaFacebook className="text-2xl" />
             </a>
             <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer" className="hover:text-primary">
               <FaTwitter className="text-2xl" />
             </a>
-            <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="hover:text-primary">
+            <a href="https://www.linkedin.com/in/md-shofiqul-islam-saad/" target="_blank" rel="noopener noreferrer" className="hover:text-primary">
               <FaLinkedin className="text-2xl" />
             </a>
           </div>
