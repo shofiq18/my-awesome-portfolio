@@ -14,37 +14,61 @@ const Hero = () => {
             <h1 className="md:text-6xl text-4xl font-bold mb-4">
               Hi, I'm <p className="text-blue-400">Md. Shofiqul Islam</p>
             </h1>
-            <p className="md:text-2xl text-lg mb-3">Frontend  Developer</p>
+            <p className="md:text-2xl text-lg mb-3">Frontend Developer</p>
             <p className="lg:w-[600px] mb-4 md:mb-0 text-sm text-gray-300">
               Passionate about creating beautiful and functional web applications
               that solve real-world problems. Specializing in modern web technologies
               and user-centric design.
             </p>
             <button className="bg-blue-500 px-6 py-3 text-white rounded-md hover:bg-blue-600 flex items-center gap-2">
-                  <Download className="text-white" />
-                  <a
-                    href="https://mybdjobs.bdjobs.com/mybdjobs/masterview.asp"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-primary"
-                  >
-                    Download CV
-                  </a>
-                </button>
+              <Download className="text-white" />
+              <a
+                href="https://mybdjobs.bdjobs.com/mybdjobs/masterview.asp"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-primary"
+              >
+                Download CV
+              </a>
+            </button>
 
-
+            {/* Social Icons */}
             <div className="flex gap-6 text-2xl transition-all mt-5 md:mt-0">
-              <a href="https://github.com/shofiq18" target="_blank" rel="noopener noreferrer">
-                <FaGithub className="text-2xl hover:text-primary" />
+              {/* GitHub */}
+              <a
+                href="https://github.com/shofiq18"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:opacity-80"
+              >
+                <FaGithub className="text-2xl text-[#746d6d]" />
               </a>
-              <a href="https://www.facebook.com/mdshafiqulislam.shafiq.9659" target="_blank" rel="noopener noreferrer">
-                <FaFacebook className="text-2xl hover:text-primary" />
+              {/* Facebook */}
+              <a
+                href="https://www.facebook.com/mdshafiqulislam.shafiq.9659"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:opacity-80"
+              >
+                <FaFacebook className="text-2xl text-[#1877F2]" />
               </a>
-              <a href="mailto:shafiqulislam25021998@gmail.com" target="_blank" rel="noopener noreferrer">
-                <FaEnvelope className="text-2xl hover:text-primary" />
+              {/* Email */}
+              <a
+                href="mailto:shafiqulislam25021998@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:opacity-80"
+              >
+                <FaEnvelope className="text-2xl text-gray-300" />
               </a>
-              <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer">
-                <FaTwitter className="text-2xl hover:text-primary" />
+              {/* Twitter */}
+              <a
+                href="https://twitter.com/yourprofile"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:opacity-80"
+              >
+                <FaTwitter className="text-2xl text-[#1DA1F2]" />
               </a>
             </div>
           </div>

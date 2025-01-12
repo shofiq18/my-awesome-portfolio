@@ -28,17 +28,44 @@ const Footer = () => {
 
           {/* Social Links */}
           <div className="flex space-x-4 justify-center">
-            <a href="https://github.com/shofiq18" target="_blank" rel="noopener noreferrer" className="hover:text-primary">
-              <FaGithub className="text-2xl" />
+            {/* GitHub */}
+            <a
+              href="https://github.com/shofiq18"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:opacity-80"
+            >
+              <FaGithub className="text-2xl text-[#3f3b3b]" />
             </a>
-            <a href="https://www.facebook.com/mdshafiqulislam.shafiq.9659/" target="_blank" rel="noopener noreferrer" className="hover:text-primary">
-              <FaFacebook className="text-2xl" />
+
+            {/* Facebook */}
+            <a
+              href="https://www.facebook.com/mdshafiqulislam.shafiq.9659/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:opacity-80"
+            >
+              <FaFacebook className="text-2xl text-[#1877F2]" />
             </a>
-            <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer" className="hover:text-primary">
-              <FaTwitter className="text-2xl" />
+
+            {/* Twitter */}
+            <a
+              href="https://twitter.com/yourprofile"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:opacity-80"
+            >
+              <FaTwitter className="text-2xl text-[#1DA1F2]" />
             </a>
-            <a href="https://www.linkedin.com/in/md-shofiqul-islam-saad/" target="_blank" rel="noopener noreferrer" className="hover:text-primary">
-              <FaLinkedin className="text-2xl" />
+
+            {/* LinkedIn */}
+            <a
+              href="https://www.linkedin.com/in/md-shofiqul-islam-saad/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:opacity-80"
+            >
+              <FaLinkedin className="text-2xl text-[#0A66C2]" />
             </a>
           </div>
         </div>
