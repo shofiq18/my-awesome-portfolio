@@ -3,8 +3,7 @@ import { Download } from "lucide-react";
 import image from "../assets/WhatsApp Image 2025-01-02 at 00.17.01_66d29ab0.jpg";
 import Reveal from "../animation/Reveal";
 import { motion } from "framer-motion";
-import resume from '../assets/Resume Of Md Shofiqul Islam-Frontend Developer  (1).pdf'
-
+import resume from "../assets/Resume Of Md Shofiqul Islam-Frontend Developer  (1).pdf" ;
 const Hero = () => {
   return (
     <section className="bg-gray-950 text-white flex flex-col justify-center items-center relative overflow-hidden">
