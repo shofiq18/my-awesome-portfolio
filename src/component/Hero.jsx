@@ -3,6 +3,7 @@ import { Download } from "lucide-react";
 import image from "../assets/WhatsApp Image 2025-01-02 at 00.17.01_66d29ab0.jpg";
 import Reveal from "../animation/Reveal";
 import { motion } from "framer-motion";
+import resume from '../assets/Resume Of Md Shofiqul Islam-Frontend Developer  (1).pdf'
 
 const Hero = () => {
   return (
@@ -23,7 +24,7 @@ const Hero = () => {
             <button className="bg-blue-500 px-6 py-3 text-white rounded-md hover:bg-blue-600 flex items-center gap-2">
               <Download className="text-white" />
               <a
-                href="https://mybdjobs.bdjobs.com/mybdjobs/masterview.asp"
+                href={resume}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-primary"
