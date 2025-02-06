@@ -34,7 +34,7 @@ const Hero = () => {
             </button>
 
             {/* Social Icons */}
-            <div className="flex gap-6 text-2xl transition-all mt-5 md:mt-0">
+            <div className="flex gap-6 text-2xl transition-all mt-6 md:mt-0">
               {/* GitHub */}
               <a
                 href="https://github.com/shofiq18"
