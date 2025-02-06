@@ -17,7 +17,7 @@ const skills = [
 
 const Skills = () => {
   return (
-    <div className="relative w-full overflow-hidden py-20 bg-gray-950">
+    <div id="skills" className="relative w-full overflow-hidden py-20 bg-gray-950">
       <h2 className="text-4xl font-bold text-white text-center mt-16 mb-20">Skills</h2>
       <motion.div
         className="flex space-x-28 w-max" // Increased space between logos
