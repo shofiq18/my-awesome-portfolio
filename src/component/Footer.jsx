@@ -12,7 +12,7 @@ const Footer = () => {
         <div className="flex flex-col lg:flex-row justify-between items-center space-y-6 lg:space-y-0">
           {/* Brand Section */}
           <div className="text-center lg:text-left">
-            <h2 className="text-2xl font-bold text-primary">My Awesome Portfolio</h2>
+            <h2 className="text-3xl font-bold text-primary">My Awesome Portfolio</h2>
             <p className="text-sm my-2">Crafting digital experiences with passion & precision.</p>
             <p className="text-sm">&copy; {new Date().getFullYear()} All rights reserved.</p>
           </div>

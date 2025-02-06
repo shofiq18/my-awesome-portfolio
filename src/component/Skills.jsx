@@ -1,65 +1,43 @@
+
 import { motion } from "framer-motion";
 
-const skills = {
-  Frontend: [
-    { name: 'React', level: 90 },
-    { name: 'Daisyui', level: 85 },
-    { name: 'Tailwind CSS', level: 90 },
-    { name: 'Framer motion', level: 80 },
-  ],
-  Backend: [
-    { name: 'Node.js', level: 85 },
-    { name: 'Express', level: 80 },
-    { name: 'MongoDB', level: 70 },
-  ],
-  Tools: [
-    { name: 'Git', level: 85 },
-    { name: 'vercel', level: 70 },
-    { name: 'Axios', level: 65 },
-    { name: 'Figma', level: 75 },
-  ],
-};
+const skills = [
+  { name: "HTML", image: "https://cdn.simpleicons.org/html5/white", gradient: "from-red-500 to-orange-500", direction: "up" },
+  { name: "CSS", image: "https://cdn.simpleicons.org/css3/white", gradient: "from-blue-500 to-indigo-500", direction: "down" },
+  { name: "JavaScript", image: "https://cdn.simpleicons.org/javascript/black", gradient: "from-yellow-400 to-yellow-600", direction: "up" },
+  { name: "Tailwind CSS", image: "https://cdn.simpleicons.org/tailwindcss/white", gradient: "from-cyan-400 to-blue-500", direction: "down" },
+  { name: "React", image: "https://cdn.simpleicons.org/react/white", gradient: "from-blue-400 to-blue-600", direction: "up" },
+  { name: "Node.js", image: "https://cdn.simpleicons.org/nodedotjs/white", gradient: "from-green-400 to-green-600", direction: "down" },
+  { name: "Express.js", image: "https://cdn.simpleicons.org/express/white", gradient: "from-gray-700 to-black", direction: "up" },
+  { name: "MongoDB", image: "https://cdn.simpleicons.org/mongodb/white", gradient: "from-green-500 to-green-700", direction: "down" },
+  { name: "Figma", image: "https://cdn.simpleicons.org/figma/white", gradient: "from-purple-500 to-pink-500", direction: "up" },
+  { name: "VS Code", image: "https://i.ibb.co.com/hRcPg90C/png-transparent-microsoft-visual-studio-code-alt-macos-bigsur-icon-thumbnail.png", gradient: "from-blue-600 to-blue-800", direction: "down" }, // Fixed VS Code logo
+  { name: "Firebase", image: "https://cdn.simpleicons.org/firebase/white", gradient: "from-yellow-500 to-orange-500", direction: "up" },
+];
 
 const Skills = () => {
- {
-  
- }
- 
   return (
-    <section id="skills" className="py-20 bg-gray-950">
-      <div className="max-w-7xl  mx-auto px-8 md:px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-          Skills
-        </h2>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {Object.entries(skills).map(([category, categorySkills]) => (
-            <motion.div key={category} className="bg-gray-900 p-6 rounded-none  shadow-[0px_0px_px_10px_rgba(0,0,0,0.3)] shadow-blue-500"
-            whileHover={{ y: -10 }} // Moves the card up by 10px on hover
-            transition={{ type: "spring", stiffness: 300, damping: 20 }}
-            >
-              <h3 className="text-xl font-semibold mb-6 text-blue-500">{category}</h3>
-              <div className="space-y-4">
-                {categorySkills.map((skill) => (
-                  <div key={skill.name}>
-                    <div className="flex justify-between mb-1">
-                      <span className="text-white">{skill.name}</span>
-                      <span className="text-white">{skill.level}%</span>
-                    </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div
-                        className="bg-primary rounded-full h-2"
-                        style={{ width: `${skill.level}%` }}
-                      />
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
+    <div className="relative w-full overflow-hidden py-20 bg-gray-950">
+      <h2 className="text-4xl font-bold text-white text-center mt-16 mb-20">Skills</h2>
+      <motion.div
+        className="flex space-x-28 w-max" // Increased space between logos
+        animate={{ x: ["-10%", "-100%"] }}
+        transition={{ repeat: Infinity, duration: 30, ease: "linear" }} // Slower animation
+      >
+        {skills.map((skill, index) => (
+          <motion.div
+            key={index}
+            className={`w-44 h-40 flex flex-col items-center justify-center rounded-bl-3xl rounded-tr-3xl bg-gradient-to-br ${skill.gradient} shadow-md shadow-gray-800`}
+            whileHover={{ scale: 1.1 }}
+            animate={{ y: skill.direction === "up" ? [0, -15, 0] : [0, 15, 0] }} // Zigzag Up-Down motion
+            transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }} // Slower bounce
+          >
+            <img src={skill.image} alt={skill.name} className="w-20 h-20" />
+            <p className="text-white font-semibold mt-2">{skill.name}</p>
+          </motion.div>
+        ))}
+      </motion.div>
+    </div>
   );
 };
 
