@@ -29,7 +29,7 @@ const projectsData = [
     {
     name: 'Food Sharing Website',
     image: 'https://i.ibb.co/Z1d27ZQL/Screenshot-7.png',
-    description: 'A community-driven site for sharing recipes and cooking tips.',
+    description: 'A food sharing platform where users can donate food, share recipes, and connect with others in the community.',
     stack: ['React', 'Node.js', 'MongoDB', 'Tailwind CSS'],
     liveLink: 'https://food-bd-31846.web.app/',
     githubLink: 'https://github.com/programming-hero-web-course2/b10a11-client-side-shofiq18',
