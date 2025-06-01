@@ -51,6 +51,17 @@ const projectsData = [
     improvements: 'Plans to implement a user rating system and enhance the recommendation algorithm.',
   },
   {
+    name: 'Fresh Harvests - Organic Farming',
+    image: 'https://i.ibb.co/20gbbJk4/Screenshot-13.png',
+    description: 'A platform for organic farmers to connect, share resources, and promote their products. Users can explore organic farming practices and find local produce.',
+    stack: ['NextJs', 'Node.js', 'MongoDB', 'Tailwind CSS', 'RTK Query', 'Express',],
+    liveLink: 'https://fresh-harvests-sable.vercel.app/',
+    githubLink: 'https://github.com/shofiq18/fresh-harvests',
+    details: 'Fresh Harvests connects organic farmers with consumers, providing a platform to share resources, promote products, and foster community engagement.',
+    challenges: 'Integrating RTK Query for real-time updates and managing user-generated content were significant challenges.',
+    improvements: 'Plans to enhance the user interface and add features for tracking organic farming practices.',
+  },
+  {
     name: 'Adventure Mountain',
     image: 'https://i.ibb.co/1JvmLjY/adventure-mountain.jpg',
     description: 'An online platform for adventure enthusiasts and outdoor lovers where they can find and share information about hiking trails, gear recommendations, and outdoor events.',
@@ -102,7 +113,7 @@ const Projects = () => {
                   <img
                     src={project.image}
                     alt={project.name}
-                    className="w-full h-48 object-cover"
+                    className="w-full h-56 object-cover"
                   />
                 </figure>
                 <div className="card-body">
